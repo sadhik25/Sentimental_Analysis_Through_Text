@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .heading2 h2 {
+        font-size: 50px;
+        color: black;
+        font-family: "Trirong", serif;
+
+    }
+    .button1{
+        border-radius: 12px;
+    }
+
+</style>
+<div
+ style="
+ width: 90%;
+ height: 90%;
+ display: flex;
+ align-items: center;
+ justify-content: center;">
+    <div class="heading2">
+        <h2 class="font-effct-shadow-mutliple">Login</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="button1" type="submit">Login</button>
+        </div>
+     </div>
+</form>
+{% endblock %}
